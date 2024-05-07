@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="java.js"></script>
+</head>
+<body>
+    <h1>Identificar numeros iguales</h1>
+    <div>
+        <p>Ingrese tres numeros:</p>
+        <input type="number" id="numero1">
+        <input type="number" id="numero2">
+        <input type="number" id="numero3">
+        <button onclick="identificarNumeros()">Identificar</button>
+    </div>
+    <div id="resultado"></div>
+
+    <script>
+        function identificarNumeros() {
+            let numero1 = Number(document.getElementById("numero1").value);
+            let numero2 = Number(document.getElementById('numero2').value);
+            let numero3 = Number(document.getElementById('numero3').value);
+
+            let sonIguales = (numero1 == numero2) && (numero2 == numero3) && (numero1 == numero3)
+            if (sonIguales){
+                document.getElementById("resultado").innerText = "Los numeros son iguales"
+            } else {
+                document.getElementById("resultado").innerText = "Los numeros no son iguales"
+            }
+        }
+    </script>
+    
+</body>
+</html>
